@@ -4,45 +4,73 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
     <title>Contact</title>
   </head>
   <body>
-    <form id="contactForm" class="form-container" action="submit.php" method="POST">
-        <div>
-          <label>Name </br> <input type="text" name="Name" id="Name" /></label>
-          <div class="form-error" id="NameError">
-            Please enter your Name
-          </div>
-        </div>
-        <div>
-          <label
-            >E-mail </br>
-            <input type="text" name="E-mail" id="E-mail" />
-          </label>
-          <div class="form-error" id="E-mailError">
-            Please enter your E-mail
-          </div>
-        </div>
-        <div>
-          <label
-            >Subject </br>
-            <input type="text" name="Subject" id="Subject" />
-          </label>
-          <div class="form-error" id="SubjectError">
-            Please enter Subject
-          </div>
-        </div>
-        <div>
-            <label
-              >Message content </br>
-              <input type="text" name="Message" id="Message" />
-            </label>
-            <div class="form-error" id="MessageError">
-                25 characters required.
+    <header class="header-container">
+      <img
+        class="photo"
+        src="images/rsz_shutterstock_1499445923-kopi.jpg"
+        alt="Girl with shopping-bags"
+      />
+      <p class="blogg">BLOGG.NO</p>
+      <nav class="nav">
+        <a class="current, nav-item" href="index.html">Home</a>
+        <a class="nav-item" href="about.html">About</a>
+        <a class="nav-item" href="contact.html">Contact</a>
+        <a class="nav-item" href="allposts.html">All Posts</a>
+      </nav>
+      <p class="photo">A blogg about online shopping</p>
+      <div class="search">
+        <label for="search"></label>
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Search for website or post"
+        />
+      </div>
+    </header>
+    <main class="main-container">
+      <div class="blog-posts">
+        <form id="contactForm" class="form-container" action="submit.php" method="POST">
+          <div>
+            <label>Name </br> <input type="text" name="Name" id="Name" /></label>
+            <div class="form-error" id="NameError">
+              Please enter your Name
             </div>
           </div>
-        <button id="submit" class="button"><a id="link" href="checkout-payment.html">Submit</a></button>
-    </form>
+          <div>
+            <label
+              >E-mail </br>
+              <input type="text" name="E-mail" id="E-mail" />
+            </label>
+            <div class="form-error" id="E-mailError">
+              Please enter your E-mail
+            </div>
+          </div>
+          <div>
+            <label
+              >Subject </br>
+              <input type="text" name="Subject" id="Subject" />
+            </label>
+            <div class="form-error" id="SubjectError">
+              Please enter Subject
+            </div>
+          </div>
+          <div>
+              <label
+                >Message content </br>
+                <input type="text" name="Message" id="Message" />
+              </label>
+              <div class="form-error" id="MessageError">
+                  25 characters required.
+              </div>
+            </div>
+          <button id="submit" class="button"><a id="link" href="checkout-payment.html">Submit</a></button>
+      </form>
+      </div>
     <script src="javascript/contact.js"></script>
   </body>
 </html>
