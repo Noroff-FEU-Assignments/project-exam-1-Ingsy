@@ -78,5 +78,5 @@ input {
   grid-template-columns: 50% 50%;
   grid-template-rows: 1fr;
   grid-template-areas: "section1 section2";
-  background-color: #efe7e7;
+  background-color: #ea9b96;
 }
