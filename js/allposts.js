@@ -8,7 +8,8 @@ function getPosts() {
         const title = title.rendered;
         const text = content.rendered;
 
-        const product = list[i];
+        /* const product = list[i];
+
         const id = product.id;
         const title = product.name;
         const description = product.short_description;
