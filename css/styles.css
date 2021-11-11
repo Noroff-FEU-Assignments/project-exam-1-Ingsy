@@ -70,13 +70,16 @@ input {
 .blog-posts {
   border-radius: 30px;
   height: 400px;
-  width: 1200px;
   margin: 50px;
   padding: 50px;
   background-color: #fff;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.home-page {
+  width: 1200px;
 }
 
 .latest-post {
@@ -109,4 +112,7 @@ input {
   background-color: #edc331;
   height: 70px;
   width: 100%;
+}
+
+.carousel {
 }
