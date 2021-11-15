@@ -13,12 +13,6 @@
   font-weight: bold;
 }
 
-h2 {
-  justify-content: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-}
-
 .photo {
   grid-area: photo;
   z-index: 1;
@@ -115,4 +109,21 @@ input {
 }
 
 .carousel {
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+figure {
+  flex: 1;
+  overflow: hidden;
+  transition: 1s all;
+}
+
+figure:hover {
+  cursor: pointer;
+}
+
+.selected-post {
+  flex: 5;
 }
