@@ -116,7 +116,6 @@ input {
 
 figure {
   flex: 1;
-  overflow: hidden;
   transition: 1s all;
 }
 
