@@ -41,6 +41,7 @@
 }
 .current {
   text-decoration: underline !important;
+  margin-top: 5px;
 }
 
 .search {
