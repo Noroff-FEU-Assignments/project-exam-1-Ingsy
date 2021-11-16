@@ -1,1 +1,44 @@
+main {
+  background-image: url("/images/shopping-grønn-about.jpg");
+  background-color: #cccccc;
+}
 
+.about-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.about {
+  border-radius: 30px;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  align-items: center;
+  padding: 10px;
+  height: fit-content;
+}
+
+.white {
+  background-color: #fff;
+}
+
+.about-two {
+  border-radius: 30px;
+  margin: 20px;
+  padding: 15px;
+  font-size: 18px;
+  line-height: 150%;
+  background-color: white;
+}
+
+.text-about {
+  font-size: 18px;
+  margin-right: 40px;
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  line-height: 150%;
+}
