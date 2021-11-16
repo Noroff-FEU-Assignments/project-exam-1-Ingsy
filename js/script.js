@@ -17,9 +17,9 @@ async function getPosts() {
             post.featured_media
         );
         const imageData = await imageRequest.json();
-        const figure = `<figure class="selected-post latest-post cc-column">
+        const figure = `<figure class="selected-post latest-post">
                         <h3>${title}</h3>
-                        <img src="${imageData.guid.rendered}" alt="${imageData.alt_text}"/>
+                        <img class="img-slider" src="${imageData.guid.rendered}" alt="${imageData.alt_text}"/>
                         <h3>Read more</h3>
                       </figure> 
                     `;
