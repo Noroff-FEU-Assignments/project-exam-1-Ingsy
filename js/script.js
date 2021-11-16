@@ -56,7 +56,7 @@ function setSlide(pos) {
   carouselposts.forEach(function (post) {
     post.style.display = "none";
   });
-  // bytt ut med array slice,google it baby
+  // bytt ut med array slice
   // 2. Show only correct range of posts according to clicked dot
   for (
     let i = pos * numVisiblePost;

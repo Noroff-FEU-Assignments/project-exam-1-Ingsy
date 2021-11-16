@@ -5,64 +5,49 @@ const url = `http://projectexamingsy.local/wp-json/wp/v2/posts/${id}`;
 fetch(url)
   .then((resp2) => resp2.json())
   .then((product) => {
-    document.querySelector("#jacket-name").innerHTML = product.name;
-    document.querySelector(".jacket-area").innerHTML = `
-        <div></div>
-            <div class="big grey-light-bg cc-column">
-              <img
-                src="./Img/jacket-spesific/windbreaker-jacket-big.png"
-                alt="windbreaker jacket"
-              />
-            </div>
-            <div class="selection">
-              <div class="cc-column">
-                <img
-                  src="./Img/jacket-spesific/windbreaker-jacket-down.png"
-                  alt="windbreaker jacket"
-                />
-              </div>
-              <div class="cc-column">
-                <img
-                  src="./Img/jacket-spesific/windbreaker-jacket-small.png"
-                  alt="windbreaker jacket"
-                />
-              </div>
-              <div class="cc-column">
-                <img
-                  src="./Img/jacket-spesific/windbreaker-jacket-right.png"
-                  alt="windbreaker jacket"
-                />
-              </div>
-              <div class="cc-column">
-                <img
-                  src="./Img/jacket-spesific/windbreaker-jacket-left.png"
-                  alt="windbreaker jacket"
-                />
-              </div>
-            </div>
+    document.querySelector(".spesific-container").innerHTML =;
+    document.querySelector(".container-one").innerHTML = `
+    <div class="blog-spesific">
+    <h1>${post.title.rendered}</h1>
+    <p class="lorem">
+    ${post.content.rendered}
+    </p>
+  </div>
         `;
-    document.querySelector(".colors-area").innerHTML = `
-        <div class="colors-area-text cc-column">
-              <div>${product.name}</div>
-              <div>${product.price_html}</div>
-            </div>
-            <div class="color-area-selection">
-              <div class="yellow-bg box"></div>
-              <div class="green-bg box"></div>
-              <div class="black-bg box"></div>
-              <div class="grey-bg box"></div>
-            </div>
-            <div class="color-area-footer cc-column">
-              <div>S M L</div>
-              <button class="button-color" onclick="addToChart('yellow')">
-                Add to chart
-              </button>
-
-              <div class="description cc-column">
-                <div>Description</div>
-                <div class="desk">Category</div>
-                <div class="desk">Details</div>
-              </div>
-            </div>
+    document.querySelector(".blog-spesific").innerHTML = `
+    <div><img ${post.featured_media} class="img-logo" /></div>
+    <section class="blog-spesific-two">
+      <div class="bold">
+        <div class="item">go to site:</div>
+        <div class="item">discount:</div>
+        <div class="item">student discount:</div>
+        <div class="item">available on app:</div>
+      </div>
+      <div class="margin">
+        <div class="item">
+          <a href="https://www.zalando.no">www.zalando.no</a>
+        </div>
+        <div class="item">10% when signup newsletter</div>
+        <div class="item">no student discount</div>
+        <div>Available</div>
+      </div>
+    </section>
+    <h2>Shipping & Shopping details</h2>
+    <section class="blog-spesific-two">
+      <div class="bold">
+        <div class="item">Shipping cost:</div>
+        <div class="item">Return & refunds:</div>
+        <div class="item2">Payment options:</div>
+        <div class="item">Shipping-to-location:</div>
+        <div>Track order:</div>
+      </div>
+      <div class="margin">
+        <div class="item">kr 29,-</div>
+        <div>30 days/full refund</div>
+        <div><img src="images/payment.jpg" class="img-size" /></div>
+        <div class="item">Europa</div>
+        <div>Available</div>
+      </div>
+    </section>
         `;
   });
