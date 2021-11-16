@@ -96,6 +96,14 @@ h3 {
   background-color: #edc331;
   height: 70px;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.sosial {
+  font-size: 2rem;
+  color: #707070;
+  margin: 15px;
 }
 
 .carousel {

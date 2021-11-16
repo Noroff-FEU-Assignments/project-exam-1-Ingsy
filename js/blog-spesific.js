@@ -5,8 +5,8 @@ const url = `http://projectexamingsy.local/wp-json/wp/v2/posts/${id}`;
 fetch(url)
   .then((resp2) => resp2.json())
   .then((product) => {
-    document.querySelector(".spesific-container").innerHTML =;
-    document.querySelector(".container-one").innerHTML = `
+    document.querySelector(".spesific-container").innerHTML = // HER ;
+      document.querySelector(".container-one").innerHTML = `
     <div class="blog-spesific">
     <h1>${post.title.rendered}</h1>
     <p class="lorem">
