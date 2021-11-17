@@ -5,6 +5,16 @@ const url = `http://projectexamingsy.local/wp-json/wp/v2/posts/${id}`;
 fetch(url)
   .then((resp2) => resp2.json())
   .then((product) => {
+    let html = "";
+    for (let i = 0; i < list.length; i++) {
+      const post = list[i];
+      const title = post.title.rendered;
+      const text = post.content.rendered;
+      const imageRequest = await fetch(
+        "http://projectexamingsy.local/wp-json/wp/v2/media/" +
+          post.featured_media
+      );
+      const div = 
     document.querySelector(".spesific-container").innerHTML = // HER ;
       document.querySelector(".container-one").innerHTML = `
     <div class="blog-spesific">
