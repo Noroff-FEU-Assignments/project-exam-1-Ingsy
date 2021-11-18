@@ -33,65 +33,13 @@
         />
       </div>
     </header>
-    <main class="spesific-container">
-      <div class="container-one">
-        <div class="blog-spesific">
-          <h1>Zalando</h1>
-          <p class="lorem">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum.
-          </p>
-        </div>
-        <div class="blog-spesific">
-          <div><img src="images/zalando.png" class="img-logo" /></div>
-          <section class="blog-spesific-two">
-            <div class="bold">
-              <div class="item">go to site:</div>
-              <div class="item">discount:</div>
-              <div class="item">student discount:</div>
-              <div class="item">available on app:</div>
-            </div>
-            <div class="margin">
-              <div class="item">
-                <a href="https://www.zalando.no">www.zalando.no</a>
-              </div>
-              <div class="item">10% when signup newsletter</div>
-              <div class="item">no student discount</div>
-              <div>Available</div>
-            </div>
-          </section>
-          <h2>Shipping & Shopping details</h2>
-          <section class="blog-spesific-two">
-            <div class="bold">
-              <div class="item">Shipping cost:</div>
-              <div class="item">Return & refunds:</div>
-              <div class="item2">Payment options:</div>
-              <div class="item">Shipping-to-location:</div>
-              <div>Track order:</div>
-            </div>
-            <div class="margin">
-              <div class="item">kr 29,-</div>
-              <div>30 days/full refund</div>
-              <div><img src="images/payment.jpg" class="img-size" /></div>
-              <div class="item">Europa</div>
-              <div>Available</div>
-            </div>
-          </section>
-        </div>
-      </div>
-    </main>
-    <script src="js/blog-spesific.js"></script>
+    <main class="spesific-container"></main>
+    <script src="js/posts.js"></script>
+    <script>
+      const queryString = document.location.search;
+      const params = new URLSearchParams(queryString);
+      const id = params.get("id");
+      getSinglePost(id);
+    </script>
   </body>
 </html>

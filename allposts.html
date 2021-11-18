@@ -5,12 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/styles.css" />
-    <script src="js/script.js"></script>
-    <script
-      src="https://kit.fontawesome.com/b0782a38e3.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>All blog-posts</title>
+    <link rel="stylesheet" href="/css/blog-spesific.css" />
+    <title>All-posts</title>
   </head>
   <body>
     <header class="header-container">
@@ -24,7 +20,7 @@
         <a class="current, nav-item" href="index.html">Home</a>
         <a class="nav-item" href="about.html">About</a>
         <a class="nav-item" href="contact.html">Contact</a>
-        <a class="current nav-item" href="allposts.html">blog-posts</a>
+        <a class="nav-item" href="allposts.html">Blog-posts</a>
       </nav>
       <p class="photo">A blogg about online shopping</p>
       <div class="search">
@@ -37,24 +33,10 @@
         />
       </div>
     </header>
-    <main class="main-container">
-      <div class="blog-posts">//her skal blog-spesific-post komme//</div>
-      <div class="cc-column">
-        <h3>See more posts</h3>
-        <i class="see-more fas fa-caret-down"></i>
-      </div>
-    </main>
-    <footer>
-      <div class="footer cc-column">
-        <a href="https://twitter.com/"><i class="sosial fab fa-twitter"></i></a>
-        <a href="https://facebook.com"
-          ><i class="sosial fab fa-facebook-f"></i
-        ></a>
-        <a href="https://instagram.com"
-          ><i class="sosial fab fa-instagram"></i
-        ></a>
-      </div>
-    </footer>
-    <script src="js/allposts.js"></script>
+    <main class="spesific-container"></main>
+    <script src="js/posts.js"></script>
+    <script>
+      getAllPosts();
+    </script>
   </body>
 </html>
