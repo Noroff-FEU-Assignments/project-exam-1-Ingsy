@@ -20,8 +20,8 @@ async function getSinglePost(id) {
 }
 
 async function renderPost(post, includeUrl) {
-  const description = "Bla";
-  const title = "Title";
+  const description = post.content.rendered;
+  const title = post.title.rendered;
   const imageRequest = await fetch(
     "http://projectexamingsy.local/wp-json/wp/v2/media/" + post.featured_media
   );
@@ -30,7 +30,7 @@ async function renderPost(post, includeUrl) {
   <div class="container-one">
   <div class="blog-spesific">
     <h1>${title}</h1>
-    <p class="lorem">
+    <p>
      ${description}
     </p>
     ${
@@ -48,7 +48,7 @@ async function renderPost(post, includeUrl) {
         <div class="item">student discount:</div>
         <div class="item">available on app:</div>
       </div>
-      <div class="margin">
+      <div class="margin2">
         <div class="item">
           <a href="https://www.zalando.no">www.zalando.no</a>
         </div>

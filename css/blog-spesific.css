@@ -15,9 +15,11 @@
 .container-one {
   display: flex;
 }
-.lorem {
+
+p {
   font-size: 18px;
-  margin: 40px;
+  margin-right: 40px;
+  margin-left: 40px;
 }
 
 .blog-spesific {
@@ -44,7 +46,7 @@ h1 {
   width: 200px;
 }
 .img-logo {
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: 30px;
   width: 250px;
 }
@@ -63,4 +65,8 @@ h1 {
 
 .margin {
   margin-left: 100px;
+}
+
+.margin2 {
+  margin-left: 110px;
 }

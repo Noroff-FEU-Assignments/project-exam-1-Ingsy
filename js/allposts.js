@@ -19,7 +19,7 @@ async function getPosts() {
         div class="container-one">
         <div class="blog-spesific">
           <h1>${title}</h1>
-          <p class="lorem">
+          <p>
            ${description}
           </p>
         </div>
@@ -32,7 +32,7 @@ async function getPosts() {
               <div class="item">student discount:</div>
               <div class="item">available on app:</div>
             </div>
-            <div class="margin">
+            <div class="margin2">
               <div class="item">
                 <a href="https://www.zalando.no">www.zalando.no</a>
               </div>
