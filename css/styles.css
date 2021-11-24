@@ -172,3 +172,13 @@ figure:hover {
   width: 150px;
   margin: 10px;
 }
+
+.section-home {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.bold {
+  font-weight: bold;
+}
