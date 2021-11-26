@@ -119,8 +119,18 @@ h3 {
   position: relative;
 }
 
-.slide-arrow {
+.slide-arrow-right {
   font-size: 2rem;
+  overflow-x: hidden;
+  position: absolute;
+  right: 2%;
+}
+
+.slide-arrow-left {
+  font-size: 2rem;
+  overflow-x: hidden;
+  position: absolute;
+  left: 10%;
 }
 
 .slide-dots {
@@ -152,6 +162,9 @@ h3 {
   display: flex;
   flex-direction: row;
   overflow-x: hidden;
+  position: absolute;
+  left: 13%;
+  right: 5%;
 }
 
 figure {
