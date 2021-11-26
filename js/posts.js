@@ -35,7 +35,7 @@ async function renderPost(post, includeUrl) {
     </p>
     ${
       includeUrl
-        ? `<a href="/blog-spesific.html?id=${post.id}">les mer</a>`
+        ? `<a href="/blog-spesific.html?id=${post.id}">Find out more</a>`
         : ""
     }
   </div>
