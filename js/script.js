@@ -1,4 +1,5 @@
 let curretDot = 0;
+let numberOfDots = 0;
 let numVisiblePost = 4;
 
 async function getPosts() {
@@ -7,11 +8,9 @@ async function getPosts() {
     .then(async (response) => response.json())
     .then(async (list) => {
       let html = "";
-      let dotNumber = 0;
       for (let i = 0; i < list.length; i++) {
         const post = list[i];
         const title = post.title.rendered;
-        const text = post.content.rendered;
         const imageRequest = await fetch(
           "http://projectexamingsy.local/wp-json/wp/v2/media/" +
             post.featured_media
@@ -19,8 +18,8 @@ async function getPosts() {
         const imageData = await imageRequest.json();
         const figure = `<figure class="selected-post latest-post">
                         <h3>${title}</h3>
-                        <img class="img-slider" src="${imageData.guid.rendered}" alt="${imageData.alt_text}"/>
-                        <h3>Read more</h3>
+                        <img onclick="showModalContent(this)" class="img-slider" src="${imageData.guid.rendered}" alt="${imageData.alt_text}"/>
+                        <h3><a href="/blog-spesific.html?id=${post.id}">Find out more</a></h3>
                       </figure> 
                     `;
         html = html + figure;
@@ -29,8 +28,8 @@ async function getPosts() {
         if (rest === 0) {
           document.querySelector(
             ".slide-dots"
-          ).innerHTML += `<div class="slide-dot" onclick="setSlide(${dotNumber})"></div>`;
-          dotNumber++;
+          ).innerHTML += `<div class="slide-dot" onclick="setSlide(${numberOfDots})"></div>`;
+          numberOfDots++;
         }
       }
       let dots = document.querySelectorAll(".slide-dot");
@@ -51,6 +50,7 @@ function setupCarousel() {
 }
 
 function setSlide(pos) {
+  console.log(pos);
   const carouselposts = document.querySelectorAll(".carousel figure");
   //1. Hide all posts
   carouselposts.forEach(function (post) {
@@ -72,6 +72,15 @@ function setSlide(pos) {
   });
   // Add current to actually clicked dot
   dots[pos].classList.toggle("current");
+  curretDot = pos;
+}
+
+function setSlidePrevius() {
+  var remain = (curretDot - 1) % numberOfDots;
+  setSlide(remain >= 0 ? remain : remain + numberOfDots);
+}
+function setSlideNext() {
+  setSlide((curretDot + 1) % numberOfDots);
 }
 
 getPosts();

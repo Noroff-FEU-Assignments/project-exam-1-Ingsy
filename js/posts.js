@@ -16,6 +16,7 @@ async function getSinglePost(id) {
     .then(async (data) => {
       document.querySelector(".spesific-container").innerHTML +=
         await renderPost(data, false);
+      document.title = document.title + " " + data.title.rendered;
     });
 }
 

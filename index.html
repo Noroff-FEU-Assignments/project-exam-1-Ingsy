@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/about.css" />
+    <link rel="stylesheet" href="/css/modal.css" />
     <script
       src="https://kit.fontawesome.com/b0782a38e3.js"
       crossorigin="anonymous"
     ></script>
-    <title>Home</title>
+    <title>Blog | Home</title>
     <!-- Hotjar Tracking Code for https://github.com/noroff-feu-assignments/project-exam-1-ingsy.git -->
     <script>
       (function (h, o, t, j, a, r) {
@@ -29,6 +30,12 @@
     </script>
   </head>
   <body>
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div id="modal-content">
+        
+      </div>
+    </div>
     <header class="header-container">
       <img
         class="photo"
@@ -62,9 +69,9 @@
     <main class="main-container">
       <h1 class="cc-column">Latest post</h1>
       <section class="carousel blog-posts home-page">
-        <i class="slide-arrow-left fas fa-angle-left"></i>
+        <i class="slide-arrow-left fas fa-angle-left" onclick="setSlidePrevius()"></i>
         <div class="container"></div>
-        <i class="slide-arrow-right fas fa-angle-right"></i>
+        <i class="slide-arrow-right fas fa-angle-right" onclick="setSlideNext()"></i>
         <div class="slide-dots"></div>
       </section>
       <section class="section-home">
@@ -102,5 +109,6 @@ Track order: </br>
       </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/modal.js"></script>
   </body>
 </html>

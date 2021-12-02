@@ -1,21 +1,12 @@
 // Get the modal
 var modal = document.getElementById("myModal");
+var modalContent = document.getElementById("modal-content");
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function () {
+function showModalContent(img) {
   modal.style.display = "block";
-};
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
-};
+  console.log(img);
+  modalContent.innerHTML = `<img class="img-modal" src="${img.src}" alt="${img.alt}"/>`;
+}
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {

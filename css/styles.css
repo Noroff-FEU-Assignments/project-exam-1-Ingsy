@@ -193,6 +193,10 @@ figure:hover {
   margin: 10px;
 }
 
+.img-modal {
+  width: 50%;
+}
+
 .section-home {
   display: flex;
   flex-direction: row;
