@@ -1,6 +1,6 @@
 .form-error {
   display: none;
-  color: red;
+  color: #a90000;
   margin-top: 2px;
   font-size: 0.9rem;
 }
