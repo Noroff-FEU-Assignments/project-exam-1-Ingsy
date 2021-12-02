@@ -39,17 +39,23 @@
       </nav>
       <p class="photo">A blogg about online shopping</p>
       <div class="search">
-        <label for="search"></label>
+        <form action="/" method="GET" class="form">
+          <label for="search"></label>
         <input
           type="text"
           name="search"
           id="search"
           placeholder="Search for website or post"
+          class="search-field"
         />
+        <button type="submit" class="search-button">
+          <img src="/images/226571_glass_magnifying_icon.png" alt="magnifying icon"> 
+        </button>
+        </form>
       </div>
     </header>
     <main class="contact-container">
-      <div class="form">
+      <div class="form-contact">
         <form id="contactForm" action="submit.php" method="POST">
           <h1>Contact us</h1>
           <div>

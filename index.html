@@ -45,6 +45,7 @@
       <p class="photo">A blogg about online shopping</p>
       <div class="search">
         <form action="/" method="GET" class="form">
+          <label for="search"></label>
         <input
           type="text"
           name="search"
@@ -53,7 +54,7 @@
           class="search-field"
         />
         <button type="submit" class="search-button">
-          <img src="/images/226571_glass_magnifying_icon.png">
+          <img src="/images/226571_glass_magnifying_icon.png" alt="magnifying icon"> 
         </button>
         </form>
       </div>
@@ -89,11 +90,14 @@ Track order:
     </main>
     <footer>
       <div class="footer cc-column">
-        <a href="https://twitter.com/"><i class="sosial fab fa-twitter"></i></a>
-        <a href="https://facebook.com"
+        <div>
+        <label for="twitter"></label>
+        <a href="https://twitter.com/" id="twitter"><i class="sosial fab fa-twitter"></i></a>
+      </div>
+        <a href="https://facebook.com" id="facebook"
           ><i class="sosial fab fa-facebook-f"></i
         ></a>
-        <a href="https://instagram.com"
+        <a href="https://instagram.com" id="instagram"
           ><i class="sosial fab fa-instagram"></i
         ></a>
       </div>
