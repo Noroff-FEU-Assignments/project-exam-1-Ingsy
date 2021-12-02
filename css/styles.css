@@ -19,6 +19,13 @@
   max-width: 700px;
 }
 
+.blog-text {
+  margin-left: 120px;
+  margin-top: 10px;
+  color: #457203;
+  font-size: 22px;
+}
+
 .blogg {
   grid-area: photo;
   z-index: 2;

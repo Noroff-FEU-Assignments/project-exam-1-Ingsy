@@ -40,7 +40,9 @@ async function renderPost(post, includeUrl) {
     }
   </div>
   <div class="blog-spesific">
-    <div><img src="${imageData.guid.rendered}" class="img-logo" /></div>
+    <div><img src="${
+      imageData.guid.rendered
+    }" class="img-logo" alt="companys logo" /></div>
     <section class="blog-spesific-two">
       <div class="bold">
         <div class="item">go to site:</div>
