@@ -23,8 +23,7 @@ async function getPosts() {
            ${description}
           </p>
         </div>
-        <div class="blog-spesific">
-          <div><img src="${imageData.guid.rendered}" class="img-logo" /></div>
+          <div><img onclick="showModalContent(this)" src="${imageData.guid.rendered}" alt="${imageData.alt_text}"class="img-logo" /></div>
           <section class="blog-spesific-two">
             <div class="bold">
               <div class="item">go to site:</div>

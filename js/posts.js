@@ -41,9 +41,9 @@ async function renderPost(post, includeUrl) {
     }
   </div>
   <div class="blog-spesific">
-    <div><img src="${
+    <div><img onclick="showModalContent(this)" src="${
       imageData.guid.rendered
-    }" class="img-logo" alt="companys logo" /></div>
+    }" alt="${imageData.alt_text}"class="img-logo" /></div>
     <section class="blog-spesific-two">
       <div class="bold">
         <div class="item">go to site:</div>
