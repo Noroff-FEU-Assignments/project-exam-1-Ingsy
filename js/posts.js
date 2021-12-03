@@ -1,5 +1,5 @@
 async function getAllPosts() {
-  fetch(`http://projectexamingsy.local/wp-json/wp/v2/posts`)
+  fetch(`http://projectexamingsy.local/wp-json/wp/v2/posts?per_page=12`)
     .then(async (resp) => resp.json())
     .then(async (data) => {
       for (let i = 0; i < data.length; i++) {

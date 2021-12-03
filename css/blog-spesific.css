@@ -5,6 +5,11 @@
   background-color: #ea9b96;
 }
 
+.hideLast > .container-one:nth-last-child(-n + 2) {
+  display: none;
+  border: 1px red solid;
+}
+
 .nav-2 {
   display: flex;
   justify-content: center;
@@ -80,5 +85,13 @@ h6 {
 .seemore-icon {
   font-size: 23px;
   font-weight: bold;
-  margin: 3px;
+  background-color: #ea9b96;
+  cursor: pointer;
+}
+
+.blogpost {
+  display: none;
+}
+.blogpost:nth-child(-n + 10) {
+  display: block;
 }

@@ -62,12 +62,11 @@
         </form>
       </div>
     </header>
-    <main class="spesific-container">
-      <div class="cc-column seemore-icon">
-        view more
-        <i class="fas fa-angle-down"></i>
-      </div>
-    </main>
+    <main class="spesific-container hideLast"></main>
+    <div class="cc-column seemore-icon" onclick="showMore()">
+      <span id="seemore-label">view more</span>
+      <i class="fas fa-angle-down"></i>
+    </div>
     <footer>
       <div class="footer cc-column">
         <a href="https://twitter.com/"><i class="sosial fab fa-twitter"></i></a>
@@ -82,6 +81,24 @@
     <script src="js/posts.js"></script>
     <script>
       getAllPosts();
+      let seeMore = true;
+      function showMore() {
+        document
+          .querySelector(".spesific-container")
+          .classList.toggle("hideLast");
+        seeMore = !seeMore;
+        document.querySelector("#seemore-label").innerHTML = seeMore
+          ? "View more"
+          : "View less";
+        let icon = document.querySelector(".fas");
+        if (seeMore) {
+          icon.classList.remove("fa-angle-up");
+          icon.classList.add("fa-angle-down");
+        } else {
+          icon.classList.add("fa-angle-up");
+          icon.classList.remove("fa-angle-down");
+        }
+      }
     </script>
   </body>
 </html>
