@@ -91,9 +91,11 @@ input {
 
 h3 {
   display: flex;
-  font-size: 15px;
-  margin-bottom: 5px;
-  margin-top: 50px;
+  justify-content: center;
+}
+
+h1 {
+  margin: 0fr;
 }
 
 .main-container {

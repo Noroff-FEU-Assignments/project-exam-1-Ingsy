@@ -24,7 +24,7 @@ async function getPosts() {
                     `;
         html = html + figure;
         document.querySelector(".container").innerHTML += figure;
-        let rest = i % numVisiblePost; // Modulo: https://en.wikipedia.org/wiki/Modulo_operation
+        let rest = i % numVisiblePost;
         if (rest === 0) {
           document.querySelector(
             ".slide-dots"
@@ -52,12 +52,11 @@ function setupCarousel() {
 function setSlide(pos) {
   console.log(pos);
   const carouselposts = document.querySelectorAll(".carousel figure");
-  //1. Hide all posts
+
   carouselposts.forEach(function (post) {
     post.style.display = "none";
   });
-  // bytt ut med array slice
-  // 2. Show only correct range of posts according to clicked dot
+
   for (
     let i = pos * numVisiblePost;
     i < pos * numVisiblePost + numVisiblePost;
@@ -66,11 +65,11 @@ function setSlide(pos) {
     carouselposts[i].style.display = "block";
   }
   let dots = document.querySelectorAll(".slide-dot");
-  // Remove current from all dots
+
   dots.forEach(function (dot) {
     dot.classList.remove("current");
   });
-  // Add current to actually clicked dot
+
   dots[pos].classList.toggle("current");
   curretDot = pos;
 }
