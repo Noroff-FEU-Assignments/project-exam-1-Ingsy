@@ -50,7 +50,6 @@ function setupCarousel() {
 }
 
 function setSlide(pos) {
-  console.log(pos);
   const carouselposts = document.querySelectorAll(".carousel figure");
 
   carouselposts.forEach(function (post) {
