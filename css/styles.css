@@ -94,10 +94,6 @@ h3 {
   justify-content: center;
 }
 
-h1 {
-  margin: 0fr;
-}
-
 .main-container {
   background-color: #ea9b96;
 }
@@ -208,10 +204,12 @@ figure:hover {
   font-weight: bold;
 }
 
-.form {
+.form :focus {
   display: flex;
   flex-direction: row;
+  color: red;
 }
+
 .search-field {
   width: 100%;
   padding: 10px 35px 10px 15px;

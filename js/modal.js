@@ -1,5 +1,5 @@
-var modal = document.getElementById("myModal");
-var modalContent = document.getElementById("modal-content");
+var modal = document.querySelector("#myModal");
+var modalContent = document.querySelector("#modal-content");
 
 function showModalContent(img) {
   modal.style.display = "block";
@@ -12,3 +12,5 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+console.log(modal);
