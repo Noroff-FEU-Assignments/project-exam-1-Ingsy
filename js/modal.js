@@ -8,9 +8,7 @@ function showModalContent(img) {
 }
 
 window.onclick = function (event) {
-  if (event.target == modal) {
+  if (event.target == modalContent) {
     modal.style.display = "none";
   }
 };
-
-console.log(modal);

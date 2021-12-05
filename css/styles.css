@@ -191,7 +191,8 @@ figure:hover {
 }
 
 .img-modal {
-  width: 50%;
+  width: 30%;
+  margin: 340px;
 }
 
 .section-home {
@@ -210,14 +211,6 @@ figure:hover {
   color: red;
 }
 
-.search-field {
-  width: 100%;
-  padding: 10px 35px 10px 15px;
-  border: none;
-  border-radius: 100px;
-  outline: none;
-}
-
 .search-button {
   background: transparent;
   border: none;
@@ -226,7 +219,5 @@ figure:hover {
 }
 
 .search-button img {
-  width: 20px;
-  height: 20px;
-  object-fit: cover;
+  height: 30px;
 }
