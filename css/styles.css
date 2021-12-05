@@ -128,6 +128,7 @@ h3 {
   overflow-x: hidden;
   position: absolute;
   right: 2%;
+  cursor: pointer;
 }
 
 .slide-arrow-left {
@@ -135,6 +136,7 @@ h3 {
   overflow-x: hidden;
   position: absolute;
   left: 10%;
+  cursor: pointer;
 }
 
 .slide-dots {
@@ -154,6 +156,7 @@ h3 {
   margin: 1rem;
   margin-bottom: 1rem;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 .slide-dot.current {
   background-color: black;
@@ -178,16 +181,12 @@ figure {
   height: 250px;
   border-radius: 30px;
   background-color: #fff;
-  cursor: pointer;
-}
-
-figure:hover {
-  cursor: pointer;
 }
 
 .img-slider {
   width: 150px;
   margin: 10px;
+  cursor: pointer;
 }
 
 .img-modal {
@@ -205,10 +204,13 @@ figure:hover {
   font-weight: bold;
 }
 
-.form :focus {
-  display: flex;
-  flex-direction: row;
+.form:focus {
   color: red;
+}
+
+.img-slider:focus {
+  border-color: red;
+  border-width: 1px;
 }
 
 .search-button {
@@ -216,6 +218,9 @@ figure:hover {
   border: none;
   outline: none;
   margin-top: -213px;
+}
+.search-button:focus {
+  color: red;
 }
 
 .search-button img {

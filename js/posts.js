@@ -23,6 +23,7 @@ async function getSinglePost(id) {
 async function renderPost(post, includeUrl) {
   const description = post.content.rendered;
   const title = post.title.rendered;
+  const web = post.excerpt.rendered;
   const imageRequest = await fetch(
     "http://projectexamingsy.local/wp-json/wp/v2/media/" + post.featured_media
   );
@@ -41,7 +42,8 @@ async function renderPost(post, includeUrl) {
     }
   </div>
   <div class="blog-spesific">
-    <div><img onclick="showModalContent(this)" src="${
+
+    <div><img role="button" tabindex=0 onkeyup="" onkeydown="showModalContent(this)" onclick="showModalContent(this)" src="${
       imageData.guid.rendered
     }" alt="${imageData.alt_text}"class="img-logo" /></div>
     <section class="blog-spesific-two">
@@ -53,7 +55,7 @@ async function renderPost(post, includeUrl) {
       </div>
       <div class="margin2">
         <div class="item">
-          <a href="https://www.zalando.no">www.zalando.no</a>
+          <a href="${web.replace("<p>", "").replace("</p>", "")}">${web}</a>
         </div>
         <div class="item">10% when signup newsletter</div>
         <div class="item">no student discount</div>
@@ -72,7 +74,7 @@ async function renderPost(post, includeUrl) {
       <div class="margin">
         <div class="item">kr 29,-</div>
         <div>30 days/full refund</div>
-        <div><img src="images/payment.jpg" class="img-size" /></div>
+        <div><img src="images/payment.jpg" alt="payment-options" class="img-size" /></div>
         <div class="item">Europa</div>
         <div>Available</div>
       </div>

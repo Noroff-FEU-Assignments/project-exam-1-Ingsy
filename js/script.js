@@ -18,8 +18,8 @@ async function getPosts() {
         const imageData = await imageRequest.json();
         const figure = `<figure class="selected-post latest-post">
                         <h3>${title}</h3>
-                        <img onclick="showModalContent(this)" class="img-slider" src="${imageData.guid.rendered}" alt="${imageData.alt_text}"/>
-                        <h3><a href="/blog-spesific.html?id=${post.id}">Find out more</a></h3>
+                        <img role="button" tabindex=0 onkeyup="" onkeydown="showModalContent(this)" onclick="showModalContent(this)" class="img-slider" src="${imageData.guid.rendered}" alt="${imageData.alt_text}"/>
+                        <figcaption><h3><a href="/blog-spesific.html?id=${post.id}">Find out more</a></h3></figcaption>
                       </figure> 
                     `;
         html = html + figure;
@@ -28,7 +28,7 @@ async function getPosts() {
         if (rest === 0) {
           document.querySelector(
             ".slide-dots"
-          ).innerHTML += `<div class="slide-dot" onclick="setSlide(${numberOfDots})"></div>`;
+          ).innerHTML += `<div title="slider" role="button" class="slide-dot" tabindex=0 onkeyup="" onkeydown="setSlide(${numberOfDots})" onclick="setSlide(${numberOfDots})"></div>`;
           numberOfDots++;
         }
       }
