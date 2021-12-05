@@ -45,7 +45,7 @@ async function renderPost(post, includeUrl) {
 
     <div><img role="button" tabindex=0 onkeyup="" onkeydown="showModalContent(this)" onclick="showModalContent(this)" src="${
       imageData.guid.rendered
-    }" alt="${imageData.alt_text}"class="img-logo" /></div>
+    }" alt="${imageData.alt_text}" class="img-logo" /></div>
     <section class="blog-spesific-two">
       <div class="bold">
         <div class="item">go to site:</div>
