@@ -1,7 +1,5 @@
-// fra script
-
 async function getPosts() {
-  const url = "http://projectexamingsy.local/wp-json/wp/v2/posts/";
+  const url = "https://ingeborgmellingen.com/wp-json/wp/v2/posts/";
   fetch(url)
     .then(async (response) => response.json())
     .then(async (list) => {
@@ -10,7 +8,7 @@ async function getPosts() {
         const description = "Bla";
         const title = "Title";
         const imageRequest = await fetch(
-          "http://projectexamingsy.local/wp-json/wp/v2/media/" +
+          "https://ingeborgmellingen.com/wp-json/wp/v2/media/" +
             post.featured_media
         );
         const imageData = await imageRequest.json();

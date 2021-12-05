@@ -1,5 +1,5 @@
 async function getAllPosts() {
-  fetch(`http://projectexamingsy.local/wp-json/wp/v2/posts?per_page=12`)
+  fetch(`https://ingeborgmellingen.com/wp-json/wp/v2/posts?per_page=12`)
     .then(async (resp) => resp.json())
     .then(async (data) => {
       for (let i = 0; i < data.length; i++) {
@@ -11,7 +11,7 @@ async function getAllPosts() {
 }
 
 async function getSinglePost(id) {
-  fetch(`http://projectexamingsy.local/wp-json/wp/v2/posts/${id}`)
+  fetch(`https://ingeborgmellingen.com/wp-json/wp/v2/posts/${id}`)
     .then(async (resp) => resp.json())
     .then(async (data) => {
       document.querySelector(".spesific-container").innerHTML +=
@@ -25,7 +25,7 @@ async function renderPost(post, includeUrl) {
   const title = post.title.rendered;
   const web = post.excerpt.rendered;
   const imageRequest = await fetch(
-    "http://projectexamingsy.local/wp-json/wp/v2/media/" + post.featured_media
+    "https://ingeborgmellingen.com/wp-json/wp/v2/media/" + post.featured_media
   );
   const imageData = await imageRequest.json();
   return `

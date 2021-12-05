@@ -3,7 +3,7 @@ let numberOfDots = 0;
 let numVisiblePost = 4;
 
 async function getPosts() {
-  const url = "http://projectexamingsy.local/wp-json/wp/v2/posts?per_page=12";
+  const url = "https://ingeborgmellingen.com/wp-json/wp/v2/posts?per_page=12";
   fetch(url)
     .then(async (response) => response.json())
     .then(async (list) => {
@@ -12,7 +12,7 @@ async function getPosts() {
         const post = list[i];
         const title = post.title.rendered;
         const imageRequest = await fetch(
-          "http://projectexamingsy.local/wp-json/wp/v2/media/" +
+          "https://ingeborgmellingen.com/wp-json/wp/v2/media/" +
             post.featured_media
         );
         const imageData = await imageRequest.json();
