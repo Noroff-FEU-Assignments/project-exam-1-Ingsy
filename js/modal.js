@@ -3,7 +3,6 @@ var modalContent = document.querySelector("#modal-content");
 
 function showModalContent(img) {
   modal.style.display = "block";
-  console.log(img);
   modalContent.innerHTML = `<img class="img-modal" src="${img.src}" alt="${img.alt}"/>`;
 }
 
